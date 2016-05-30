@@ -20,7 +20,7 @@ $(document).ready(function() {
       if (data.items.length > 0) {
         $.each(data.items,function(i,photo) {
           photoHTML += '<li class="grid-25 tablet-grid-50">';
-          photoHTML += '<a href="' + photo.link + '" class="image">';
+          photoHTML += '<a href="' + photo.link + '" class="image" target="_blank">';
           photoHTML += '<img src="' + photo.media.m + '"></a></li>';
         }); // end each
       } else {
@@ -29,6 +29,7 @@ $(document).ready(function() {
       $('#photos').html(photoHTML);
       $searchField.prop("disabled", false);
       $submitButton.attr("disabled", false).val("Search");
+      $searchField.val('');
     }); // end getJSON
 
   }); // end click

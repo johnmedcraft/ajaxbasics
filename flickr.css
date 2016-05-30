@@ -2068,9 +2068,15 @@ input[type=search] {
 .btn-primary {
   background-color: green;
 }
+.btn-primary:focus {
+  background-color: green;
+}
 .btn-primary:hover{
   background-color: darkgreen;
 }
-.btn-primary:disabled{
-  background-color: gray;
+.btn[disabled]:hover{
+  background-color: darkgreen;
+}
+.btn:click{
+  background-color: darkgreen;
 }
